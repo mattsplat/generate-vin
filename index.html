@@ -6,9 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
-    
-
-</body>
+<script src="./prefixes.js"></script>
 <script src="./main.js"></script>
+<body>
+    <div id="vin"></div>
+</body>
+<script>
+    window.addEventListener('click', () => {
+        const id_field = document.getElementById("id");
+        const vin = getVIN();
+        console.log("VIN = ", vin);
+        id_field.innerHTML = vin;
+    });
+   
+</script>
 </html>
